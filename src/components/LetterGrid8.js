@@ -43,7 +43,7 @@ export default (now) => {
     }
     // TWENTY PAST OR TWENTY TO
     else if((minute >= 20 && minute < 30) || (minute >= 40 && minute < 45)) {
-        activeIndexes.push(29, 30, 31, 32, 33, 34);
+        activeIndexes.push(25, 26, 27, 28, 29, 30);
         activeIndexes.push(40, 41, 42, 43, 44, 45, 46); // MINUTES
     }
     // HALF PAST
