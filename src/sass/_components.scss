@@ -1,0 +1,43 @@
+.letter {
+    font-size: 5rem;
+    padding: 1rem;
+    width: 6rem;
+    color: rgb(36, 36, 36);
+
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 75em) {
+        width: 5rem;
+    }
+
+    @media (max-width: 56.25em) {
+        font-size: 3rem;
+        width: 3rem;
+    }
+
+    @media (max-width: 41.25em) {
+        font-size: 2rem;
+        width: 2rem;
+    }
+
+
+    &--active {
+        color: white;
+        border-radius: 50%;
+        background-image: radial-gradient(rgba(212, 224, 33, 0.637), yellow);
+        animation: fadeIn 1.5s;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-3rem);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

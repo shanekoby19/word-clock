@@ -1,0 +1,23 @@
+.container {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(5rem, 10rem)) 1fr;
+    grid-gap: 1.5rem;
+    font-size: 5rem;
+    justify-content: center;
+    background-color: rgba(24, 22, 22, 0.9);
+
+    @media (max-width: 75em) {
+        grid-template-columns: repeat(8, minmax(5rem, 10rem));
+    }
+
+    @media (max-width: 41.25em) {
+        grid-column-gap: 0.1rem;
+    }
+}
+
+.letter__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
