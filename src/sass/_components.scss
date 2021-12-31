@@ -8,17 +8,19 @@
     justify-content: center;
 
     @media (max-width: 75em) {
-        width: 5rem;
+        font-size: 5rem;
+        padding: 0rem;
+        width: 8rem;
     }
 
     @media (max-width: 56.25em) {
-        font-size: 3rem;
-        width: 3rem;
+        font-size: 5rem;
+        width: 5rem;
     }
 
     @media (max-width: 41.25em) {
-        font-size: 2rem;
-        width: 2rem;
+        font-size: 3rem;
+        width: 3rem;
     }
 
 

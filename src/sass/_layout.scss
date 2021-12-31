@@ -2,17 +2,22 @@
     padding: 3rem;
     display: grid;
     grid-template-columns: 1fr repeat(12, minmax(5rem, 10rem)) 1fr;
-    grid-gap: 1.5rem;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: repeat(auto-fit, minmax(1fr, 3rem));
     font-size: 5rem;
     justify-content: center;
     background-color: rgba(24, 22, 22, 0.9);
+    height: 95vh;
 
     @media (max-width: 75em) {
         grid-template-columns: repeat(8, minmax(5rem, 10rem));
     }
 
     @media (max-width: 41.25em) {
-        grid-column-gap: 0.1rem;
+        grid-template-columns: repeat(8, minmax(2rem, 5rem));
+        grid-gap: 0;
+        padding: 0;
+        height: 100vh;
     }
 }
 
