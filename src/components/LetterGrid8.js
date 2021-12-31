@@ -19,13 +19,20 @@ export default (now) => {
     // ]
 
     let activeIndexes = [0, 1, 3, 4, 120, 121, 122, 123, 124, 125, 126]; // IT IS O'CLOCK
-    const hour =  now.getHours() % 12; // Get the current hour from military to standard.
     const minute = now.getMinutes(); // Get the current minute.
 
     // PAST OR TO
-    if((minute >= 5 && minute <= 55)) {
-        minute < 40 ? activeIndexes.push(48, 49, 50, 51) : activeIndexes.push(54, 55);
+    if(minute >= 5 && minute <= 60) {
+        if(minute < 40) {
+            activeIndexes.push(48, 49, 50, 51);
+        }
+        else {
+            activeIndexes.push(54, 55);
+            now.setHours(now.getHours() + 1);
+        } 
     }
+
+    const hour =  now.getHours() % 12; // Get the current hour from military to standard.
 
     // 5 PAST OR 5 TO
     if(minute >= 5 && minute < 10 || (minute >= 55 && minute < 60)) {
@@ -35,7 +42,7 @@ export default (now) => {
     // 10 PAST OR TEN TO
     else if(minute >= 10 && minute < 15 || (minute >= 50 && minute < 55)) {
         activeIndexes.push(5, 6, 7);
-        activeIndexes.push(19, 41, 42, 43, 44, 45, 46); // MINUTES
+        activeIndexes.push(40, 41, 42, 43, 44, 45, 46); // MINUTES
     }
     // A QUARTER PAST OR A QUARTER TO
     else if((minute >= 15 && minute < 20) || (minute >= 45 && minute < 50)) {
